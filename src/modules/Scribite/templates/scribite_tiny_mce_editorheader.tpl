@@ -1,4 +1,3 @@
-{* $Id$ *}
 <!-- start scribite! with TinyMCE for {$modname} -->
 <script type="text/javascript" src="{$editors_path}/{$editor_dir}/tiny_mce.js"></script>
 <script type="text/javascript">
@@ -76,8 +75,6 @@
     }
 
 /* ]]> */
-
-
 
 </script>
 <!-- end scribite! with TinyMCE -->

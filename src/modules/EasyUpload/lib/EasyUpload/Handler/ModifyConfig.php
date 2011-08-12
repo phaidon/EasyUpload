@@ -8,13 +8,13 @@
  *
  * @license GNU/LGPLv3 (or at your option, any later version).
  * @package EasyUpload
- * @link http://code.zikula.org/socialise
+ * @link https://github.com/phaidon/EasyUpload
  *
  * Please see the NOTICE file distributed with this source code for further
  * information regarding copyright and licensing.
  */
 
-class EasyUpload_Handler_ModifyConfig  extends Zikula_Form_Handler
+class EasyUpload_Handler_ModifyConfig  extends Zikula_Form_AbstractHandler
 {
 
     function initialize(Zikula_Form_View $view)

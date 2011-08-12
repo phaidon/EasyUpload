@@ -1,9 +1,12 @@
-<br /><br />
-<form class="z-form"  enctype="multipart/form-data" action="{modurl modname='EasyUpload' type='user' func='uploadImage'}" method="POST">
-
-    <label for="file">{gt text='Upload image'}:</label>
-    <input name="file" type="file">
-
-    {button src='button_ok.gif' set='icons/extrasmall' __alt='upload' __title='upload' __text='upload'}
-
+<form class="z-gap z-form" enctype="multipart/form-data" action="{modurl modname='EasyUpload' type='user' func='uploadImage'}" method="post">
+    <fieldset>
+        <legend>{gt text='Upload'}</legend>
+        <div class="z-formrow">
+            <label for="file">{gt text='Upload image:'}</label>
+            <input id="file" name="file" type="file" />
+        </div>
+        <div class="z-formbuttons z-buttons">
+            {button src='button_ok.png' set='icons/extrasmall' __alt='Upload' __title='Upload' __text='Upload'}
+        </div>
+    </fieldset>
 </form>
