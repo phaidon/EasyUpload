@@ -1,25 +1,25 @@
-{include file="admin/header.tpl"}
-<div class="z-adminpageicon">{icon type="config" size="large"}</div>
-<h2>{gt text="Modify configuration"}</h2>
+{adminheader}
+<div class="z-admin-content-pagetitle">
+    {icon type="config" size="small"}
+    <h3>{gt text="Modify configuration"}</h3>
+</div>
 
 {form cssClass="z-form"}
 {formvalidationsummary}
 
 <fieldset>
     <legend>{gt text='General settings'}</legend>
-
-      <div class="z-formrow">
+    <div class="z-formrow">
         {formlabel for="uploads_path" __text='URL to your uploads folder'}
         {formtextinput size="40" maxLength="100" id="uploads_path" text=$modvars.EasyUpload.uploads_path}
-        <em class="z-formnote">E.g. uploads</em>
-      </div>
-
-        <div class="z-formbuttons">
-            {formimagebutton id="create" commandName="create" __text="Save" imageUrl="images/icons/small/button_ok.gif"}
-        </div>
-
+        <em class="z-formnote z-sub">{gt text='e.g. uploads'}</em>
+    </div>
 </fieldset>
+
+<div class="z-buttons z-formbuttons">
+    {formbutton class='z-bt-ok' commandName='save' __text='Save'}
+</div>
 
 {/form}
 
-{include file="admin/footer.tpl"}
+{adminfooter}
