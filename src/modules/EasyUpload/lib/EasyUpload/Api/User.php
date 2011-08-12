@@ -43,18 +43,18 @@ class EasyUpload_Api_User extends Zikula_AbstractApi
         }
         $ex = end(explode(".", $name));
         if ( !in_array($ex, $allowedExtensions) ) {
-            return LogUtil::registerError ("Invalid file type !".$ex);
+            return LogUtil::registerError($this->__f('Error! Invalid file type: %1$s', $ex));
         }
 
         //Check file size
         if($size >= 16000000) {
-            return LogUtil::registerError ("Your file is too big! The limit is 14 MB!");
+            return LogUtil::registerError($this->__('Error! Your file is too big. The limit is 14 MB.'));
         }
 
 
         //If everything is ok we try to upload it
         if (file_exists($target)) {
-                return LogUtil::registerError ("Sorry, the file already exists!");
+                return LogUtil::registerError($this->__('Error! Sorry, but the file already exists.'));
         }
 
         if(move_uploaded_file($tmp_name, $target))
@@ -64,7 +64,7 @@ class EasyUpload_Api_User extends Zikula_AbstractApi
         }
         else
         {
-            return LogUtil::registerError ("Sorry, there was a problem uploading your file.");
+            return LogUtil::registerError($this->__('Error! Sorry, there was a problem uploading your file.'));
         }  
     }
 
@@ -93,7 +93,7 @@ class EasyUpload_Api_User extends Zikula_AbstractApi
 
         if(!file_exists($image))
         {
-            return LogUtil::registerError ('No file found');
+            return LogUtil::registerError($this->__('Error! No file found'));
         }
         else
         {
@@ -103,7 +103,7 @@ class EasyUpload_Api_User extends Zikula_AbstractApi
             /*** check for a supported image type ***/
             if($image_type > 3 )
             {
-                return LogUtil::registerError ('invalid image'.$image);
+                return LogUtil::registerError($this->__f('Error! Invalid image: %1$s', $image));
             }
             else
             {
@@ -125,7 +125,7 @@ class EasyUpload_Api_User extends Zikula_AbstractApi
                 /*** write the file to disc ***/
                 if(!is_writeable(dirname($thumb)))
                 {
-                    return LogUtil::registerError ('unable to write image in ' . dirname($thumb));
+                    return LogUtil::registerError($this->__f('Error! Unable to write image in %1$s', dirname($thumb)));
                 }
                 else
                 {
