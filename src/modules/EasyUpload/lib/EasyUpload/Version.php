@@ -19,11 +19,11 @@ class EasyUpload_Version extends Zikula_AbstractVersion
 	public function getMetaData()
 	{
 		$meta = array();
-		$meta['displayname']    = 'Easy Upload';
-		$meta['description']    = 'An easy way to upload files in the Scribite! editors.';
+		$meta['displayname']    = $this->__('Easy Upload');
+		$meta['description']    = $this->__('An easy way to upload files in the Scribite! editors.');
 		$meta['version']        = '0.1.0';
 		//!url must be different to displayname
-		$meta['url']            = __('EasyUpload');
+		$meta['url']            = $this->__('EasyUpload');
 		$meta['author']         = 'Fabian Wuertz';
 		$meta['contact']        = 'http://fabian.wuertz.org';
 		return $meta;

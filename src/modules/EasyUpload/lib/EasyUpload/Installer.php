@@ -23,7 +23,7 @@ class EasyUpload_Installer extends Zikula_AbstractInstaller
 	*/
 	public function install()
 	{
-        $this->setVar('uploads_path',    '');
+        $this->setVar('uploads_path', 'userdata/easyupload');
         return true;
 	}
 
