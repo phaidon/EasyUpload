@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Zikula component\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-21 23:31+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/EasyUpload/Api/Admin.php:27
+msgid "Settings"
+msgstr ""
+
+#: lib/EasyUpload/Api/User.php:46
+#, php-format
+msgid "Error! Invalid file type: %1$s"
+msgstr ""
+
+#: lib/EasyUpload/Api/User.php:51
+msgid "Error! Your file is too big. The limit is 14 MB."
+msgstr ""
+
+#: lib/EasyUpload/Api/User.php:57
+msgid "Error! Sorry, but the file already exists."
+msgstr ""
+
+#: lib/EasyUpload/Api/User.php:67
+msgid "Error! Sorry, there was a problem uploading your file."
+msgstr ""
+
+#: lib/EasyUpload/Api/User.php:96
+msgid "Error! No file found"
+msgstr ""
+
+#: lib/EasyUpload/Api/User.php:106
+#, php-format
+msgid "Error! Invalid image: %1$s"
+msgstr ""
+
+#: lib/EasyUpload/Api/User.php:128
+#, php-format
+msgid "Error! Unable to write image in %1$s"
+msgstr ""
+
+#: lib/EasyUpload/Version.php:22
+msgid "Easy Upload"
+msgstr ""
+
+#: lib/EasyUpload/Version.php:23
+msgid "An easy way to upload files in the Scribite! editors."
+msgstr ""
+
+#. !url must be different to displayname
+#: lib/EasyUpload/Version.php:26
+msgid "EasyUpload"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:4
+msgid "Modify configuration"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:12
+msgid "General settings"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:15
+msgid "URL to your uploads folder"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:18
+msgid "e.g. uploads"
+msgstr ""
+
+#: templates/admin/modifyconfig.tpl:23
+msgid "Save"
+msgstr ""
+
+#: templates/plugin/uploadImage.tpl:4 templates/plugin/uploadImage.tpl:11
+msgid "Upload"
+msgstr ""
+
+#: templates/plugin/uploadImage.tpl:6
+msgid "Upload image:"
+msgstr ""
+
+#: templates/user/browseImages.tpl:1
+msgid "Upload manager"
+msgstr ""
+
+#: templates/user/browseImages.tpl:28
+msgid "Click to an image to include it!"
+msgstr ""
+
+#: templates/user/browseImages.tpl:37
+msgid "No images available"
+msgstr ""
