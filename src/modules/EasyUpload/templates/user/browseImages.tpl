@@ -23,10 +23,16 @@
 
 {insert name='getstatusmsg'}
 
-<p><em>{gt text="Click to an image to include it!"}</em></p>
+<p>
+    <em>
+        {gt text="Click to an image to include it!"}
+    </em>
+</p>
 
-{foreach from=$images item="image"}
-    <a href="javascript:returnUrl('{$modvars.EasyUpload.uploads_path}/{$image}')"><img src="{$baseUrl}{$modvars.EasyUpload.uploads_path}/thumbs/{$image}"></a>
+{foreach from=$images item="image" key='thumb'}
+    <a href="javascript:returnUrl('{$baseUrl}{$modvars.EasyUpload.uploads_path}/{$image}')">
+        <img src="{$baseUrl}{$thumb}">
+    </a>
 {foreachelse}
     {gt text='No images available'}
 {/foreach}

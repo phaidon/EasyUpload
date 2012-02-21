@@ -23,9 +23,9 @@ class EasyUpload_Controller_User extends Zikula_AbstractController
     * @return Redirect
     */
 
-    public function main($args)
+    public function main()
     {
-        return $this->browseImages($args);
+        return $this->browseImages();
     }
 
     /**
@@ -35,7 +35,7 @@ class EasyUpload_Controller_User extends Zikula_AbstractController
     * @return The render var
     */   
     
-    public function browseImages($args)
+    public function browseImages()
     {
         // Security check
         if (!SecurityUtil::checkPermission('EasyUpload::', '::', ACCESS_READ)) {
@@ -49,7 +49,11 @@ class EasyUpload_Controller_User extends Zikula_AbstractController
             while (false !== ($file = readdir($handle))) {
                 $extension = end(explode(".", $file));
                 if ( in_array($extension, $allowedExtensions) ) {
-                    $images[] = $file;
+                    $thumb = $upload_path.'/thumbs/'.$file.'.jpg';
+                    if(!file_exists($thumb)) {
+                        $thumb = $upload_path.'/'.$file;
+                    }                    
+                    $images[$thumb] = $file;
                 }
             }
 
@@ -59,7 +63,8 @@ class EasyUpload_Controller_User extends Zikula_AbstractController
         $this->view->assign('images', $images );
         $this->view->assign('baseUrl', System::getBaseURL() );
         
-        return $this->view->fetch('user/browseImages.tpl');
+        echo $this->view->fetch('user/browseImages.tpl');
+        System::shutDown();
     }
     
     public function uploadImage($args)

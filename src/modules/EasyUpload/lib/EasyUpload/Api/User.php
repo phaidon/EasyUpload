@@ -27,9 +27,9 @@ class EasyUpload_Api_User extends Zikula_AbstractApi
     public function uploadFile($args)
     {
         // Security check
-		if (!SecurityUtil::checkPermission('EasyUpload::', '::', ACCESS_ADD)) {
-			return LogUtil::registerPermissionError();
-		}
+        if (!SecurityUtil::checkPermission('EasyUpload::', '::', ACCESS_ADD)) {
+            return LogUtil::registerPermissionError();
+        }
         
         extract($args);
 
@@ -78,9 +78,9 @@ class EasyUpload_Api_User extends Zikula_AbstractApi
     public function createThumbnail($args) {
         
         // Security check
-		if (!SecurityUtil::checkPermission('EasyUpload::', '::', ACCESS_ADD)) {
-			return LogUtil::registerPermissionError();
-		}
+        if (!SecurityUtil::checkPermission('EasyUpload::', '::', ACCESS_ADD)) {
+            return LogUtil::registerPermissionError();
+        }
         
         extract($args);
             

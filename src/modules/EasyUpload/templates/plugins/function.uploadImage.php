@@ -26,8 +26,8 @@
  */
 function smarty_function_uploadImage($params, &$smarty)
 {   
-	if(!SecurityUtil::checkPermission('EasyUpload::', '::', ACCESS_ADD) ){
+    if (!SecurityUtil::checkPermission('EasyUpload::', '::', ACCESS_ADD) ){
         return;
     }
-	return $smarty->fetch('plugin/uploadImage.tpl');
+    return $smarty->fetch('plugin/uploadImage.tpl');
 }

@@ -32,7 +32,7 @@ class EasyUpload_Handler_ModifyConfig  extends Zikula_Form_AbstractHandler
         
         $data = $view->getValues();
 
-        $this->setVar('uploads_path',    $data['uploads_path']);
+        $this->setVar('uploads_path', $data['uploads_path']);
         return true;
 
 

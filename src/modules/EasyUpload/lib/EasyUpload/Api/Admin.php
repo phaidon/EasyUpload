@@ -17,7 +17,7 @@
 class EasyUpload_Api_Admin extends Zikula_AbstractApi {
 
     // get available admin panel links
-    public function getlinks($args)
+    public function getlinks()
     {
 
         // create array of links
