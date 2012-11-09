@@ -28,4 +28,4 @@
 
 {/form}
 
-{adminfooter
+{adminfooter}
